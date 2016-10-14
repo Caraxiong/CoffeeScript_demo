@@ -43,17 +43,17 @@ coffee -e "console.log num for num in [10..1]"
 
 coffee --compile --output src/js/(注释：此文件夹是想要生成的js所在的位置文件夹) src/coffee/(注释：此文件夹为coffee文件位置)
 
-*监视一个文件的改变, 每次文件被保证时重新编译:
+* 监视一个文件的改变, 每次文件被保证时重新编译:
 
 coffee --watch --compile src/coffee/arr.coffee
 
 注：每次会在当前同个目录下生成js文件
 
-*合并一组文件到单个脚本:
+* 合并一组文件到单个脚本:
 
 coffee --join common.js --compile src/coffee/*.coffee
 
-*现在全部一起, 在你工作时监视和重复编译整个项目:
+* 现在全部一起, 在你工作时监视和重复编译整个项目:
 
 coffee -o src/js/ -cw src/coffee/
 
