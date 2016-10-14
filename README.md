@@ -73,17 +73,17 @@ coffee --compile --output src/js/(注释：此文件夹是想要生成的js所�
 
 1. 安装
 
-> npm install -g coffee-script
+	> npm install -g coffee-script
 
 2. sublime安装CoffeeScript
 
 	* sublime语法高亮插件　　
-　　　　- 打开sublime -> Ctrl+Shift+P-> 输入install package 后回车->输入coffeescript 选择第一个回车。
+　　　　* 打开sublime -> Ctrl+Shift+P-> 输入install package 后回车->输入coffeescript 选择第一个回车。
 
 	* sublime中运行coffee
-　　　　- 第一步创建目录： 打开 C:\Users\username\AppData\Roaming\Sublime Text 3\Packages里新建一个目录CoffeeScript
+　　　　* 第一步创建目录： 打开 C:\Users\username\AppData\Roaming\Sublime Text 3\Packages里新建一个目录CoffeeScript
 
-　　　　- 第二步：打开Sublime，菜单操作：Tools -> Build System -> New Build System…，输入如下：
+　　　　* 第二步：打开Sublime，菜单操作：Tools -> Build System -> New Build System…，输入如下：
 
 　　　　　　{
 　　　　　　	"cmd": ["C:\\Users\\cara\\AppData\\Roaming\\npm\\coffee.cmd", "$file"],
@@ -91,12 +91,7 @@ coffee --compile --output src/js/(注释：此文件夹是想要生成的js所�
 　　　　　　	"selector": "source.coffee"
 　　　　　　}
 
-　　　　- 第三步，将这个文件命名为Coffee.sublime-build保存到第一步中创建的coffeescript目录下
+　　　　* 第三步，将这个文件命名为Coffee.sublime-build保存到第一步中创建的coffeescript目录下
 
- 		- 第四部测试一下： Ctrl+B 就会看到结果
+ 		* 第四部测试一下： Ctrl+B 就会看到结果
  
-
- 
- 
-
-原文地址：http://www.tuicool.com/articles/E7VvIn
