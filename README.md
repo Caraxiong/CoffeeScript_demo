@@ -1,6 +1,11 @@
 # CoffeeScript_demo
 
-###安装
+##运行本项目
+
+npm install
+
+
+###安装CoffeeScript
 > npm install -g coffee-script
 
 ###用法
@@ -33,4 +38,30 @@ coffee -e "console.log num for num in [10..1]"
 - --debug, --debug-brk, --max-stack-size, 和 --expose-gc. 用这个参数直接把参数转发到 Node.js. 重复使用 --nodejs 来传递多个参数.
 
 
+###命令示例(以本实例结构为例)
+* 编译一个 .coffee 文件的树形目录 src 到一个同级  .js 文件树形目录 lib:
+
+coffee --compile --output src/js/(注释：此文件夹是想要生成的js所在的位置文件夹) src/coffee/(注释：此文件夹为coffee文件位置)
+
+*监视一个文件的改变, 每次文件被保证时重新编译:
+
+coffee --watch --compile src/coffee/arr.coffee
+
+注：每次会在当前同个目录下生成js文件
+
+*合并一组文件到单个脚本:
+
+coffee --join common.js --compile src/coffee/*.coffee
+
+*现在全部一起, 在你工作时监视和重复编译整个项目:
+
+coffee -o src/js/ -cw src/coffee/
+
+注：一直监听文件变化并生成相应js到指定文件夹
+
 ###[官网地址](http://coffee-script.org/#top)
+
+*运行 CoffeeScript REPL (Ctrl-D 来终止, Ctrl-V 激活多行):
+
+coffee
+
