@@ -17,4 +17,14 @@
     return "filling the " + container + " with " + liquid;
   };
 
+  this.customer = customer;
+
+  this.cart = cart;
+
+  $('.shopping_cart').bind('click', (function(_this) {
+    return function(event) {
+      return _this.customer.purchase(_this.cart);
+    };
+  })(this));
+
 }).call(this);
